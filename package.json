@@ -1,15 +1,15 @@
 {
   "dependencies": {
     "dotenv": "^4.0.0",
-    "express": "^4.16.2",
+    "express": "^4.16.4",
     "express-delay": "^0.2.0",
-    "jquery": "^3.2.1",
-    "nodemon": "^1.12.1",
-    "prettier": "^1.9.0",
-    "react-bodymovin": "^1.1.1",
+    "jquery": "^3.3.1",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.16.0",
+    "react-bodymovin": "^1.1.2",
     "react-copy-to-clipboard": "^5.0.1",
-    "watson-developer-cloud": "^2.42.0",
-    "watson-react-components": "^0.6.12"
+    "watson-developer-cloud": "^4.0.0",
+    "watson-react-components": "^0.6.19"
   },
   "name": "final-project",
   "version": "1.0.0",
