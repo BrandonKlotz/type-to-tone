@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { modalAlert } from "../actions";
 
 class Form extends Component {
     constructor(props) {
@@ -104,7 +103,7 @@ class Form extends Component {
         console.log(question);
 
         if (period+exclamation+question < 2) {
-            this.props.modalAlert();
+            // this.props.modalAlert();
             return;
         }
 
@@ -115,10 +114,6 @@ class Form extends Component {
     };
 }
 
-const mapActionsToProps = {
-    modalAlert
-};
-
 const mapStateToProps = state => {
     return {
         value: state.value,
@@ -128,4 +123,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, mapActionsToProps)(Form);
+export default connect(mapStateToProps, null)(Form);

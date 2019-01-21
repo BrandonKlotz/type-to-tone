@@ -7,7 +7,6 @@ import Form from "./Form.js";
 import Loader from "./Loading.js";
 import DocumentResults from "./DocumentResults.js";
 import SentenceResults from "./SentenceResults.js";
-import Modal from "./Modal";
 import AllPositiveMessage from "./AllPositiveMessage.js";
 
 class TextAnalyzer extends Component {
@@ -22,7 +21,6 @@ class TextAnalyzer extends Component {
         if (this.props.loading !== true && isEmpty(this.props.displayResults)) {
             return (
                 <div className="App">
-                    <Modal />
                     <div className="container">
                         <div className="splash">
                             <h1>The Professional Email Checker.</h1>
@@ -45,7 +43,6 @@ class TextAnalyzer extends Component {
         } else {
             return (
                 <div className="App">
-                    <Modal />
                     <h1>Your Results</h1>
                     <AllPositiveMessage />
                     <DocumentResults />
