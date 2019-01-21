@@ -3,18 +3,13 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.4",
     "express-delay": "^0.2.0",
-    "jquery": "^3.3.1",
     "nodemon": "^1.18.9",
-    "prettier": "^1.16.0",
-    "react-bodymovin": "^1.1.2",
-    "react-copy-to-clipboard": "^5.0.1",
-    "watson-developer-cloud": "^4.0.0",
-    "watson-react-components": "^0.6.19"
+    "watson-developer-cloud": "^4.0.0"
   },
-  "name": "final-project",
-  "version": "1.0.0",
+  "name": "tone-timbre",
+  "version": "1.1.0",
   "main": "server.js",
-  "repository": "https://github.com/BrandonKlotz/final-project.git",
+  "repository": "https://github.com/BrandonKlotz/tone-timbre.git",
   "author": "Brandon Klotz <brandonklotz@icloud.com>",
   "license": "MIT",
   "scripts": {

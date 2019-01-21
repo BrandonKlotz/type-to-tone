@@ -281,10 +281,6 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-attr-accept@^1.0.3:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/attr-accept/-/attr-accept-1.1.0.tgz#b5cd35227f163935a8f1de10ed3eba16941f6be6"
-
 autoprefixer@7.1.6:
   version "7.1.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.1.6.tgz#fb933039f74af74a83e71225ce78d9fd58ba84d7"
@@ -1080,10 +1076,6 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
-breakpoint-sass@^2.7.0:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/breakpoint-sass/-/breakpoint-sass-2.7.1.tgz#8ef6c4744dcc25ba83d969b6c9a17e5daa29980a"
-
 brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
@@ -1342,11 +1334,6 @@ classnames@^2.2.3:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
 
-classnames@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 clean-css@4.1.x:
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.1.9.tgz#35cee8ae7687a49b98034f70de00c4edd3826301"
@@ -1366,15 +1353,6 @@ cli-cursor@^2.1.0:
 cli-width@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
-
-clipboard@^2.0.0:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.4.tgz#836dafd66cf0fea5d71ce5d5b0bf6e958009112d"
-  integrity sha512-Vw26VSLRpJfBofiVaFb/I8PVfdI1OxKcYShe6fm0sP/DtmiWQNCjhM/okTvdCo0G+lMMm1rMYbk4IK4x1X+kgQ==
-  dependencies:
-    good-listener "^1.2.2"
-    select "^1.1.2"
-    tiny-emitter "^2.0.0"
 
 cliui@^2.1.0:
   version "2.1.0"
@@ -1852,10 +1830,6 @@ del@^3.0.0:
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
-
-delegate@^3.1.2:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.1.3.tgz#9a8251a777d7025faa55737bc3b071742127a9fd"
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -2838,12 +2812,6 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-good-listener@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
-  dependencies:
-    delegate "^3.1.2"
-
 got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
@@ -3753,6 +3721,7 @@ jest@20.0.4:
 jquery-ajax@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/jquery-ajax/-/jquery-ajax-2.1.4.tgz#eb7bcc07b3d0f021b75e6029e886ac78ced67a36"
+  integrity sha1-63vMB7PQ8CG3XmAp6IaseM7WejY=
 
 jquery@^3.3.1:
   version "3.3.1"
@@ -4095,10 +4064,6 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
 
-map-range@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/map-range/-/map-range-0.1.2.tgz#a81ee666959a0c204ca433be19185949a665d814"
-
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
   resolved "https://registry.yarnpkg.com/math-expression-evaluator/-/math-expression-evaluator-1.2.17.tgz#de819fdbcd84dccd8fae59c6aeb79615b9d266ac"
@@ -4238,14 +4203,6 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-modular-scale@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/modular-scale/-/modular-scale-4.4.1.tgz#9dc07cb170ab9b536838bc7750e63fc6cc3724e0"
-
-modularscale-sass@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/modularscale-sass/-/modularscale-sass-2.1.1.tgz#a42c3a392457ac83a6b8c29a183c95540e6b388b"
 
 ms@2.0.0:
   version "2.0.0"
@@ -4425,10 +4382,6 @@ num2fraction@^1.2.2:
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
-
-numeral@^2.0.4:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/numeral/-/numeral-2.0.6.tgz#4ad080936d443c2561aed9f2197efffe25f4e506"
 
 "nwmatcher@>= 1.3.9 < 2.0.0":
   version "1.4.3"
@@ -5053,13 +5006,6 @@ pretty-format@^20.0.3:
     ansi-regex "^2.1.1"
     ansi-styles "^3.0.0"
 
-prismjs@^1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.15.0.tgz#8801d332e472091ba8def94976c8877ad60398d9"
-  integrity sha512-Lf2JrFYx8FanHrjoV5oL8YHCclLQgbJcVZR+gikGGMqz6ub5QVWDTM6YIwm3BuPxM/LOV+rKns3LssXNLIf+DA==
-  optionalDependencies:
-    clipboard "^2.0.0"
-
 private@^0.1.6, private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -5088,7 +5034,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.5.8:
+prop-types@^15.5.10, prop-types@^15.5.8:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -5267,14 +5213,6 @@ react-dropdown@^1.6.3:
   dependencies:
     classnames "^2.2.3"
 
-react-dropzone@^3.13.4:
-  version "3.13.4"
-  resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-3.13.4.tgz#84da26815c40339691c49b4544c2ef7a16912ccc"
-  integrity sha1-hNomgVxAM5aRxJtFRMLvehaRLMw=
-  dependencies:
-    attr-accept "^1.0.3"
-    prop-types "^15.5.7"
-
 react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
@@ -5288,18 +5226,6 @@ react-lifecycles-compat@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-
-react-prism@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/react-prism/-/react-prism-4.3.2.tgz#5c07609539b3ba6f45eb33e7d6a3588df3270c21"
-  integrity sha512-Z8BzDfWxzhngDtnZFjYj4RgHo7uqiWB4cOCpp//GFEpWbtINbCqHLIpL+q/f8ah5Aokw/uXkBkoLgvYIGgtm4A==
-
-react-radio-group@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/react-radio-group/-/react-radio-group-3.0.3.tgz#60bb29c7ad05d8b6f67cf443af0767ee2007cf98"
-  integrity sha512-MUNRRjZqQ2y+1K6rBuH0zO+gLVmCnWIcc5GnNwr9WNoUwZ9FUAKJ1UfsKXwYS93whR6/qrZKoVgiOltRkbzezw==
-  dependencies:
-    prop-types "^15.5.8"
 
 react-redux@^5.1.1:
   version "5.1.1"
@@ -5357,7 +5283,7 @@ react-scripts@1.0.17:
   optionalDependencies:
     fsevents "1.1.2"
 
-react@^16.6.3, react@^16.7.0:
+react@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
   integrity sha512-StCz3QY8lxTb5cl2HJxjwLFOXPIFQp+p+hxQfc8WE0QiLfCtIlKj8/+5tjjKm8uSTlAW+fCPaavGFS06V9Ar3A==
@@ -5766,10 +5692,6 @@ schema-utils@^0.3.0:
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
-
-select@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
 selfsigned@^1.9.1:
   version "1.10.1"
@@ -6262,10 +6184,6 @@ timers-browserify@^2.0.4:
   dependencies:
     setimmediate "^1.0.4"
 
-tiny-emitter@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
-
 tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -6539,31 +6457,6 @@ watchpack@^1.4.0:
     async "^2.1.2"
     chokidar "^1.7.0"
     graceful-fs "^4.1.2"
-
-watson-react-components@^0.6.19:
-  version "0.6.19"
-  resolved "https://registry.yarnpkg.com/watson-react-components/-/watson-react-components-0.6.19.tgz#c9aa224506ee75aeb4cd65cb8485923ce290d44d"
-  integrity sha512-qMiyWBN4Zyrm/PbXJ5kswDlkNyIAr0kASiaJj6gJ65GFFjsgqg4SpTJ7LWzQXAkYWfolX5VsenKmVXLah5AMFw==
-  dependencies:
-    classnames "^2.2.6"
-    map-range "^0.1.2"
-    numeral "^2.0.4"
-    prismjs "^1.15.0"
-    prop-types "^15.6.2"
-    react "^16.6.3"
-    react-dropzone "^3.13.4"
-    react-prism "^4.3.2"
-    react-radio-group "^3.0.3"
-    watson-ui-components "^0.6.2"
-
-watson-ui-components@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/watson-ui-components/-/watson-ui-components-0.6.2.tgz#ec1c88a17821e18dd1fd1a7712dbae460a7b27f4"
-  integrity sha512-bDqnb/7+oc8IthvzOlYSYRSIjQYjBRx/L7J4RfLkHqyxohNMToqhGfMnqMLcnWzuMn0ZfJ7FXQ20ZPI5ozC03w==
-  dependencies:
-    breakpoint-sass "^2.7.0"
-    modular-scale "^4.4.1"
-    modularscale-sass "^2.1.1"
 
 wbuf@^1.1.0, wbuf@^1.7.2:
   version "1.7.2"
