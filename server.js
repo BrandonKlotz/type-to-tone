@@ -8,17 +8,18 @@ var delay = require("express-delay");
 app.use(delay(1500));
 
 //  IBM BlueMix credentials
-require("dotenv").config();
+require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(express.static("client/build"));
 
 //  Initializes instance of Bluemix using env login
-const ToneAnalyzerV3 = require("watson-developer-cloud/tone-analyzer/v3");
+const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
 const tone_analyzer = new ToneAnalyzerV3({
-    username: process.env.TONE_ANALYZER_USERNAME,
-    password: process.env.TONE_ANALYZER_PASSWORD,
-    version_date: "2017-11-28"
+  apikey: process.env.TONE_ANALYZER_IAM_APIKEY,
+  username: process.env.TONE_ANALYZER_USERNAME,
+  password: process.env.TONE_ANALYZER_PASSWORD,
+  version_date: "2017-11-28"
 });
 
 //  API POST utilizes tone analyzer methods to send data and receive JSON output
