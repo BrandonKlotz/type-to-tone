@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Button from "./button/button.js";
 
 class Form extends Component {
     constructor(props) {
@@ -8,7 +9,8 @@ class Form extends Component {
         this.state = {
             value: this.props.value,
             text: this.props.value,
-            isTextAnalyzed: this.props.isTextAnalyzed
+            isTextAnalyzed: this.props.isTextAnalyzed,
+            buttonDisabled: this.props.buttonDisabled
         };
     }
 
@@ -16,15 +18,23 @@ class Form extends Component {
         if (!this.props.stillNegative) {
             return (
                 <div className="container form">
-                    <form onSubmit={this.handleSubmit} className="form">
+                    <form
+                      onSubmit={this.handleSubmit}
+                      className="form"
+                    >
                         <textarea
                             onChange={this.handleText}
                             value={this.state.value}
                             placeholder="Enter a few sentences here to analyze."
                         />
-                        <div onClick={this.handleSubmit} className="Button">
-                            {this.state.isTextAnalyzed? "Re-analyze": "Analyze"}
-                        </div>
+                        <Button
+                          color={this.state.isButtonDisabled ? "#acacac" : "#40AF4A"}
+                          gradientLightColor={this.state.isButtonDisabled ? "#dedede" : "#E7FCE9"}
+                          gradientColor="#CAF7CE"
+                          click={this.handleSubmit}
+                          text={this.state.isTextAnalyzed ? "Re-analyze" : "Analyze"}
+                        >
+                        </Button>
                     </form>
 
                     <div>
@@ -50,18 +60,35 @@ class Form extends Component {
             return (
                 <div className="container form">
                     <form onSubmit={this.handleSubmit} className="form">
-                        <h2 onClick={this.handleSampleText}>
-                            Test A Sample Message
-                        </h2>
                         <textarea
                             onChange={this.handleText}
                             value={this.state.value}
                             placeholder="Enter a few sentences here to analyze."
                         />
-                        <div onClick={this.handleSubmit} className="Button">
-                            {this.state.isTextAnalyzed?"Re-analyze": "Analyze"}
-                        </div>
                     </form>
+                    <div style={{
+                        display: "flex",
+                        width: "100%",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <Button
+                        color="#40AF4A"
+                        gradientLightColor="#E7FCE9"
+                        gradientColor="#CAF7CE"
+                        click={this.handleSampleText}
+                        text="Sample"
+                      >
+                      </Button>
+                      <Button
+                        color="#40AF4A"
+                        gradientLightColor="#E7FCE9"
+                        gradientColor="#CAF7CE"
+                        click={this.handleSubmit}
+                        text={this.state.isTextAnalyzed ? "Re-analyze": "Analyze"}
+                      >
+                      </Button>
+                  </div>
                 </div>
             );
         }
@@ -103,7 +130,7 @@ class Form extends Component {
         console.log(question);
 
         if (period+exclamation+question < 2) {
-            // this.props.modalAlert();
+            // this.props.disabledButton = true;
             return;
         }
 
