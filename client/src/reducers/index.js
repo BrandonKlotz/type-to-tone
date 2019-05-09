@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
     loading: false,
     isModalOpen: false,
+    disabledButton: true,
     displayResults: {},
     text: "",
     value: "",
@@ -24,26 +25,6 @@ export default (state = INITIAL_STATE, action) => {
             });
         case "HOME_SCREEN":
             return INITIAL_STATE;
-
-        case "MODAL_ABOUT":
-            return Object.assign({}, state, {
-                isModalOpen: true,
-                modal: "ABOUT"
-            });
-        case "MODAL_CONTACT":
-            return Object.assign({}, state, {
-                isModalOpen: true,
-                modal: "CONTACT"
-            });
-        case "MODAL_CLOSE":
-            return Object.assign({}, state, {
-                isModalOpen: false
-            });
-        case "MODAL_ALERT":
-            return Object.assign({}, state, {
-                isModalOpen: true,
-                modal: "ALERT"
-            });
         case "STILL_NEGATIVE":
             return Object.assign({}, state, {
                 stillNegative: true
