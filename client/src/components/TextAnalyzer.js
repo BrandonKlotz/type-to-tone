@@ -4,7 +4,7 @@ import { addResults } from "../actions";
 import { isEmpty } from "lodash";
 
 import Form from "./Form.js";
-import Loader from "./Loading.js";
+import Loader from "./loader/loader.js";
 import DocumentResults from "./DocumentResults.js";
 import SentenceResults from "./SentenceResults.js";
 import AllPositiveMessage from "./AllPositiveMessage.js";
@@ -22,14 +22,9 @@ class TextAnalyzer extends Component {
             return (
                 <div className="App">
                     <div className="container">
-                        <div className="splash">
-                            <h1>The Professional Email Checker.</h1>
-                            <p className="splashText">
-                                Type or paste your email. We'll look for overall
-                                tones, red flags, and give helpful suggestions
-                                on where to edit.
-                            </p>
-                        </div>
+                      <h1>
+                        Discover the color of your message.
+                      </h1>
                     </div>
                     <Form onSubmit={this.props.addResults} />
                 </div>
