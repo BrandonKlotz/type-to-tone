@@ -45,12 +45,9 @@ class SentenceResults extends Component {
         );
 
         //  Mapping through the buttons using each unique tone and omitting Tentative
-        const toneArray = without(
-            this.mapSentencesAndReturnEmotionsArray(
-                this.props.displayResults.sentences_tone
-            ),
-            "Tentative"
-        );
+        const toneArray = this.mapSentencesAndReturnEmotionsArray(
+                            this.props.displayResults.sentences_tone
+                          );
         const buttons = toneArray.map(tone => {
             return (
                 <div
