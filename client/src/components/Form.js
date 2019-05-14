@@ -20,6 +20,7 @@ class Form extends Component {
             <div className="container form">
                 <form onSubmit={this.handleSubmit} className="form">
                     <textarea
+                        data-enable-grammarly="false."
                         onKeyUp={this.handleDisabledButton}
                         onChange={this.handleText}
                         value={this.state.value}
@@ -67,7 +68,7 @@ class Form extends Component {
                   ) : null}
                   {this.state.copied ? (
                       <div className="copyMessage">
-                          <span>Copied.</span>
+                          Copied.
                       </div>
                   ) : null}
               </div>
@@ -97,6 +98,10 @@ class Form extends Component {
     }
 
     handleSampleText = event => {
+        if (this.state.sampleButtonDisabled) {
+          return;
+        }
+
         this.setState({
             value:
                 "Times are hard ! Our numbers have been disappointing for the past three quarters. We are in a competitive industry but we do offer excellent services at reasonable rates. Unfortunately we are not doing a good job of selling our services, and this is really frustrating.We cannot blame the economy for our lack of execution. Our clients need our development and design services to change their current business outcomes. It is disheartening to see that we are failing at closing deals, in such a hungry market. I am confident that with concerted effort, we can improve our numbers next quarter.",
@@ -121,6 +126,9 @@ class Form extends Component {
     };
 
     handleSubmit = event => {
+        if (this.state.buttonDisabled) {
+          return;
+        }
         event.preventDefault();
         let period = this.handleNumberOfSentences(this.state.value, ".");
         let exclamation = this.handleNumberOfSentences(this.state.value, "!");
