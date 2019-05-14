@@ -1,5 +1,6 @@
 /* -- OVERALL APP STYLING -- */
-@import url("https://use.typekit.net/jgb2gqn.css");
+/* @import url("https://use.typekit.net/jgb2gqn.css"); */
+/* This was causing really bad loading */
 
 * {
   font-family: caslons-egyptian, sans-serif;
@@ -8,7 +9,8 @@
 }
 
 h1, h2, h3, h4 {
-  letter-spacing: -2px;
+  /* letter-spacing: -2px; */
+  font-weight: bold;
   color: #F70B38;
 }
 
@@ -41,38 +43,15 @@ p, li {
   margin: 10px 0;
 }
 
-.logo {
-  cursor: pointer;
-}
-
 /* -- Homepage Styling -- */
 p.splashText {
   text-align: center;
   font-size: 1.15em;
 }
 
-/* -- Submission Form Styling -- */
-p#HomepageMessage {
-  font-size: 1.15em;
-  text-align: center;
-}
-
-form {
-  width: 100%;
-}
-
 .form {
   display: flex;
   flex-direction: column;
-}
-
-.form h2 {
-  margin-bottom: 20px;
-}
-
-.form h2:hover {
-  cursor: pointer;
-  color: black;
 }
 
 textarea {
@@ -102,7 +81,7 @@ textarea:focus {
   outline: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  box-shadow: 0px 0px 10px rgb(211, 214, 214);
+  box-shadow: 0px 6px 24px rgb(228, 230, 230);
 }
 
 .Button-Clipboard {
@@ -136,7 +115,7 @@ i {
 
 .AccordionContainer {
   overflow: hidden;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
 
 .accordion {
@@ -293,12 +272,32 @@ textarea {
   color: #000000;
 }
 
-.Analytical, .Confident, .Joy {
-  background-color: teal;
+.Analytical {
+  background-color: rgb(167, 196, 189);
 }
 
-.Fear, .Anger, .Sadness {
-  background-color: tomato;
+.Confident {
+  background-color: orange;
+}
+
+.Joy {
+  background-color: rgb(255, 225, 57);
+}
+
+.Fear {
+  background-color: lightblue;
+}
+
+.Anger {
+  background-color: rgb(255, 0, 76);
+}
+
+.Sadness {
+  background-color: rgb(172, 147, 243);
+}
+
+.Tentative {
+  background-color: #e2e2e2;
 }
 
 div.toggleButton:hover {
@@ -326,18 +325,23 @@ hr {
   margin: 1em 0;
 }
 
-.highlighted.fear span,
-.highlighted.anger span,
-.highlighted.sadness span
-{
+.highlighted.fear span {
+
+}
+.highlighted.anger span {
+
+}
+.highlighted.sadness span {
   color: white;
   background-color: tomato;
 }
+.highlighted.joy span {
 
-.highlighted.joy span,
-.highlighted.confident span,
-.highlighted.analytical span
-{
+}
+.highlighted.confident span {
+
+}
+.highlighted.analytical span {
   color: black;
   background-color: teal;
 }
@@ -455,7 +459,8 @@ hr {
 }
 
 .tentativeTentative {
-  display: none;
+  color: teal !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
 .joyJoy, .confidentConfident, .analyticalAnalytical {
