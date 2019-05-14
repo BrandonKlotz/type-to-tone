@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  margin-left: .5em;
+}
