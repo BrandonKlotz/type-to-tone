@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { join, uniq, flatten, without } from "lodash";
+import { join, uniq, flatten } from "lodash";
 
 class SentenceResults extends Component {
     constructor(props) {
@@ -12,7 +12,6 @@ class SentenceResults extends Component {
 
     render() {
         //  Constructing the sentences with appropriate text and classnames
-
         const sentences = this.props.displayResults.sentences_tone.map(
             sentence => {
                 const classnames = join(
@@ -62,10 +61,9 @@ class SentenceResults extends Component {
 
         return (
             <div className="container">
-                <h2>Sentence Tones:</h2>
                 <div className="SentenceResults">
                     <div id="SentenceReturn">
-                        <h4>Click and hold sentences to see the value ofemotion:</h4>
+                        <h4>Click and hold sentences to see the value of emotion:</h4>
                         {sentences}
                     </div>
                     <div id="ToggleControlsAndLabels">

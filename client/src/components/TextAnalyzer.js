@@ -7,7 +7,6 @@ import Form from "./Form.js";
 import Loader from "./loader/loader.js";
 import DocumentResults from "./DocumentResults.js";
 import SentenceResults from "./SentenceResults.js";
-import AllPositiveMessage from "./AllPositiveMessage.js";
 
 class TextAnalyzer extends Component {
     constructor(props) {
@@ -38,21 +37,8 @@ class TextAnalyzer extends Component {
         } else {
             return (
                 <div className="App">
-                    <h1>Your Results</h1>
-                    <AllPositiveMessage />
                     <DocumentResults />
                     <SentenceResults />
-
-                    <div className="container">
-                        <div className="splash">
-                            <h2>Edit your current message.</h2>
-                            <p className="splashText">
-                                Try to get rid of the red by editing your
-                                message and reanalyze it.
-                            </p>
-                        </div>
-                    </div>
-
                     <Form onSubmit={this.props.addResults} />
                 </div>
             );
