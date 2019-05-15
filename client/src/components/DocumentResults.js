@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import "font-awesome/css/font-awesome.css";
 import toneData from '../ToneData';
-import { isStillNegative } from '../actions';
-
 
 class DocumentResults extends Component {
 
@@ -42,7 +40,6 @@ class DocumentResults extends Component {
               </div>
             );
           } else if (!selectedTone.positive) {
-              this.props.isStillNegative();
               return (
                 <div  className={`accordion ${tone.tone_name === this.state.open?"open":"collapsed"}`}
                       key={tone.tone_name}
@@ -90,14 +87,10 @@ class DocumentResults extends Component {
   }
 }
 
-const mapActionsToProps = {
-  isStillNegative
-}
-
 const mapStateToProps = (state) => {
   return {
     displayResults: state.displayResults
   };
 }
 
-export default connect(mapStateToProps, mapActionsToProps)(DocumentResults);
+export default connect(mapStateToProps, null)(DocumentResults);
