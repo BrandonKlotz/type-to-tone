@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import Button from "./button/button.js";
+import Button from "../button/button.js";
+import './form.css';
 
 class Form extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Form extends Component {
             value: this.props.value,
             text: this.props.value,
             isTextAnalyzed: this.props.isTextAnalyzed,
-            buttonDisabled: true,
+            buttonDisabled: this.props.isTextAnalyzed ? false : true,
             sampleButtonDisabled: false,
         };
     }
@@ -33,14 +34,18 @@ class Form extends Component {
                     justifyContent: "space-between",
                   }}
                 >
-                  <Button
-                    color={this.state.sampleButtonDisabled ? "#acacac" : "#40AF4A"}
-                    gradientLightColor={this.state.sampleButtonDisabled ? "#dedede" : "#E7FCE9"}
-                    gradientColor={this.state.sampleButtonDisabled ? "#cecece" : "#CAF7CE"}
-                    click={this.handleSampleText}
-                    text="Sample"
-                  >
-                  </Button>
+                  {this.state.isTextAnalyzed ?
+                  null :
+                  (
+                    <Button
+                      color={this.state.sampleButtonDisabled ? "#acacac" : "#40AF4A"}
+                      gradientLightColor={this.state.sampleButtonDisabled ? "#dedede" : "#E7FCE9"}
+                      gradientColor={this.state.sampleButtonDisabled ? "#cecece" : "#CAF7CE"}
+                      click={this.handleSampleText}
+                      text="Sample"
+                    >
+                    </Button>
+                  )}
                   <Button
                       color={this.state.buttonDisabled ? "#acacac" : "#40AF4A"}
                       gradientLightColor={this.state.buttonDisabled ? "#dedede" : "#E7FCE9"}
@@ -50,34 +55,25 @@ class Form extends Component {
                     >
                   </Button>
                   {this.state.isTextAnalyzed ? (
-                      // <Button
-                      //   color="#4030AA"
-                      //   gradientLightColor="#E7DDF9"
-                      //   gradientColor="#DFFFFE"
-                      //   click={this.handleSubmit}
-                      //   text={this.state.value}
-                      // >
-                      // </Button>
+                    this.state.copied ? (
+                      <div className="copyMessage">
+                        Copied.
+                      </div>) : (
                       <CopyToClipboard text={this.state.value}
-                                        onCopy={() => this.setState({ copied: true })}
+                                       onCopy={() => this.setState({ copied: true })}
                       >
                           <div className="">
                               Copy to Clipboard
                           </div>
                       </CopyToClipboard>
-                  ) : null}
-                  {this.state.copied ? (
-                      <div className="copyMessage">
-                          Copied.
-                      </div>
-                  ) : null}
+                      )
+                  ) : null }
               </div>
             </div>
         );
     }
 
     handleDisabledButton = event => {
-      event.preventDefault();
       let period = this.handleNumberOfSentences(this.state.value, ".");
       let exclamation = this.handleNumberOfSentences(this.state.value, "!");
       let question = this.handleNumberOfSentences(this.state.value, "?");
@@ -97,7 +93,7 @@ class Form extends Component {
       }
     }
 
-    handleSampleText = event => {
+    handleSampleText = () => {
         if (this.state.sampleButtonDisabled) {
           return;
         }
@@ -149,8 +145,7 @@ const mapStateToProps = state => {
     return {
         value: state.value,
         text: state.value,
-        isTextAnalyzed: state.isTextAnalyzed,
-        stillNegative: state.stillNegative
+        isTextAnalyzed: state.isTextAnalyzed
     };
 };
 
