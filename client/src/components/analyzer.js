@@ -3,12 +3,12 @@ import { connect } from "react-redux";
 import { addResults } from "../actions";
 import { isEmpty } from "lodash";
 
-import Form from "./Form.js";
+import Form from "./form/form.js";
 import Loader from "./loader/loader.js";
 import DocumentResults from "./DocumentResults.js";
 import SentenceResults from "./SentenceResults.js";
 
-class TextAnalyzer extends Component {
+class Analyzer extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -37,9 +37,22 @@ class TextAnalyzer extends Component {
         } else {
             return (
                 <div className="App">
+                  <div style={{
+                    padding: '1em',
+                    border: '1px solid #E9E9E9',
+                    borderRadius: '20px',
+                    boxShadow: '0px 6px 24px #D1D1D150',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    backgroundColor: '#FDFDFD',
+                    marginBottom: '2em'
+
+                  }}>
                     <DocumentResults />
                     <SentenceResults />
                     <Form onSubmit={this.props.addResults} />
+                  </div>
                 </div>
             );
         }
@@ -58,4 +71,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps, mapActionsToProps)(TextAnalyzer);
+export default connect(mapStateToProps, mapActionsToProps)(Analyzer);
