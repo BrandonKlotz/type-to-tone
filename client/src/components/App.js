@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Nav from "./nav/nav.js";
+import Footer from "./footer/footer.js";
 import Analyzer from "./analyzer.js";
+
 
 class App extends Component {
     render() {
@@ -8,6 +10,7 @@ class App extends Component {
             <div>
                 <Nav />
                 <Analyzer />
+                <Footer />
             </div>
         );
     }

@@ -12,9 +12,9 @@ import reducer from "./reducers";
 const store = createStore(
 	reducer,
 	applyMiddleware(
-		thunkMiddleware, //	Enable thunk middleware for AJAX methods in actions
+		thunkMiddleware,
 		createLogger()
-	) // 	Enable Redux logging which is handy for developers.
+	)
 );
 
 ReactDOM.render(
