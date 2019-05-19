@@ -38,16 +38,13 @@ class Analyzer extends Component {
             return (
                 <div className="App">
                   <div style={{
-                    padding: '1em',
                     border: '1px solid #E9E9E9',
                     borderRadius: '20px',
                     boxShadow: '0px 6px 24px #D1D1D150',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
-                    backgroundColor: '#FDFDFD',
-                    marginBottom: '2em'
-
+                    backgroundColor: '#FDFDFD'
                   }}>
                     <DocumentResults />
                     <SentenceResults />

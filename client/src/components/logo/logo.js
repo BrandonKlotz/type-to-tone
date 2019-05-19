@@ -4,7 +4,7 @@ import './logo.css';
 class Logo extends Component {
     render() {
         return (
-            <svg width="40px" height="40px" viewBox="0 0 40 40">
+            <svg width="80px" height="80px" viewBox="0 0 40 40">
                 <defs>
                     <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
                         <stop stopColor="#FFE7EC" offset="0%"></stop>
