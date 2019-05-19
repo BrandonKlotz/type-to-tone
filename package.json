@@ -5,6 +5,9 @@
   "repository": "https://github.com/BrandonKlotz/type-to-tone.git",
   "author": "Brandon Klotz <brandonklotz@icloud.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.1.0"
+  },
   "scripts": {
     "heroku-postbuild": "cd client && yarn install && yarn build"
   },

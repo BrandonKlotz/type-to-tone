@@ -20,6 +20,9 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
   },
+  "engines": {
+    "node": "12.1.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
