@@ -38,5 +38,5 @@ app.post("/api/tone/", (request, response, next) => {
 
 const port = process.env.PORT || 5001;
 app.listen(port, () => {
-    console.log("Express Server is running on " + port);
+    //console.log("Express Server is running on " + port);
 });

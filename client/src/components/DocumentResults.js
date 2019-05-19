@@ -12,7 +12,6 @@ class DocumentResults extends Component {
     };
   }
   render() {
-    console.log(this.props.displayResults);
     const detectedDocThemes = this.props.displayResults.document_tone.tones.map(tone => {
       for(var i = 0; i < toneData.length; i++) {
         return (
