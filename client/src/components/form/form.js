@@ -12,10 +12,9 @@ class Form extends Component {
             text: this.props.value,
             isTextAnalyzed: this.props.isTextAnalyzed,
             buttonDisabled: this.props.isTextAnalyzed ? false : true,
-            sampleButtonDisabled: false,
+            sampleButtonDisabled: false
         };
     }
-
     render() {
         return (
             <div className="container form">
@@ -29,9 +28,18 @@ class Form extends Component {
                     />
                 </form>
                 <div style={{
+                  height: '1px',
+                  width: '90%',
+                  borderTop: '1px solid rgb(226, 230, 231)',
+                  margin: '1.5em'
+                }}></div>
+                <div style={{
                     display: "flex",
-                    width: "100%",
+                    width: "90%",
                     justifyContent: "space-between",
+                    display: 'flex',
+                    paddingRight: '4em',
+                    paddingLeft: '4em'
                   }}
                 >
                   {this.state.isTextAnalyzed ?
@@ -43,8 +51,7 @@ class Form extends Component {
                       gradientColor={this.state.sampleButtonDisabled ? "#cecece" : "#CAF7CE"}
                       click={this.handleSampleText}
                       text="Sample"
-                    >
-                    </Button>
+                    />
                   )}
                   <Button
                       color={this.state.buttonDisabled ? "#acacac" : "#40AF4A"}
@@ -52,25 +59,64 @@ class Form extends Component {
                       gradientColor={this.state.buttonDisabled ? "#cecece" : "#CAF7CE"}
                       click={this.handleSubmit}
                       text={this.state.isTextAnalyzed ? "Re-analyze" : "Analyze"}
-                    >
-                  </Button>
+                  />
                   {this.state.isTextAnalyzed ? (
                     this.state.copied ? (
-                      <div className="copyMessage">
-                        Copied.
-                      </div>) : (
+                      <div className="button-bg"
+                           id='copy-button'
+                           style={{
+                            background: 'linear-gradient(#E7EFFC, #CADBF7)'
+                           }}
+                      >
+                        <div className="button"
+                             style={{
+                              color: '#4064AF',
+                              border: '2px solid #4064AF'
+                            }}
+                        >
+                          <i className="fa fa-check"
+                            style={{
+                              fontSize: '1.25em',
+                              color: '#4064AF'
+                            }}>
+                        </i>
+                        </div>
+                      </div>
+                      ) : (
                       <CopyToClipboard text={this.state.value}
                                        onCopy={() => this.setState({ copied: true })}
+                                       id='copy-button'
                       >
-                          <div className="">
-                              Copy to Clipboard
+                        <div className="button-bg" style={{
+                          background: 'linear-gradient(#E7EFFC, #CADBF7)'
+                        }}
+                        >
+                          <div className="button copy"
+                               style={{
+                                 color: '#4064AF',
+                                 border: '2px solid #4064AF'
+                               }}
+                          >
+                              <i className="fa fa-clone"
+                                 style={{
+                                   fontSize: '1.25em',
+                                   color: '#4064AF'
+                                 }}>
+                              </i>
                           </div>
+                        </div>
                       </CopyToClipboard>
                       )
                   ) : null }
               </div>
             </div>
         );
+    }
+
+    handleHover() {
+      this.setState(state => ({
+        hover: !state.hover
+      }));
     }
 
     handleDisabledButton = event => {
