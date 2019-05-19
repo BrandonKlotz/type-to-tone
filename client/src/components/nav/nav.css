@@ -1,7 +1,8 @@
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 2em;
+  margin-bottom: 6em;
 }
 
 .logo {

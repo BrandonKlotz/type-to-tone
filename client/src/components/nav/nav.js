@@ -13,14 +13,6 @@ class Nav extends Component {
                     <Logo />
                     <span>Type To Tone</span>
                 </div>
-                <div>
-                  <i className="fa fa-github"
-                     style={{
-                       fontSize: '2em',
-                       color: 'black'
-                     }}
-                  ></i>
-                </div>
             </nav>
         );
     }
