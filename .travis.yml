@@ -3,5 +3,5 @@ node_js:
   - "12.1.0"
 cache: yarn
 script:
-  - cd client yarn build
-  - cd client yarn test
+  - yarn build
+  - yarn test
