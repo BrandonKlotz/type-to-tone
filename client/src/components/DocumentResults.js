@@ -12,22 +12,21 @@ class DocumentResults extends Component {
     };
   }
   render() {
-    const detectedDocThemes = this.props.displayResults.document_tone.tones.map(tone => {
-      for(var i = 0; i < toneData.length; i++) {
-        return (
-          <div className={`toggleButton ${tone.tone_name}`}
-               style={{
-                 fontSize: '1.2em',
-                 fontWeight: 'bold',
-                 padding: '.25em',
-                 margin: '.5em',
-
-               }}>
-            <span>{tone.tone_name}</span>
-          </div>
-        );
-      }
-    });
+    const docTones = this.props.displayResults.document_tone.tones,
+          anyTones = docTones.size > 0;
+   var detectedDocThemes = () => {
+      if (anyTones) {
+        docTones.map(tone => {
+          for(var i = 0; i < toneData.length; i++) {
+            return (
+              <div className={`docTones ${tone.tone_name}`}>
+                <span className="docTonesText">{tone.tone_name}</span>
+              </div>
+            )
+          }
+        }
+      )}
+    };
 
     return (
       <div className="DocumentResults">
@@ -45,4 +44,4 @@ const mapStateToProps = (state) => {
   };
 }
 
-export default connect(mapStateToProps, null)(DocumentResults);
+export default connect(mapStateToProps, null) (DocumentResults);
