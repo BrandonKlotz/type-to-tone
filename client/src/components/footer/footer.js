@@ -14,7 +14,7 @@ class Footer extends Component {
           justifyContent: 'flex-end',
           width: '100%',
           marginTop: '8em',
-          height: '360px',
+          height: '400px',
           position: 'absolute',
           backgroundImage: dataUri,
           backgroundRepeat: 'no-repeat',
@@ -30,7 +30,7 @@ class Footer extends Component {
               padding: '4em'
         }}
         >
-          <a target="_blank" href="https://github.com/BrandonKlotz/type-to-tone">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/BrandonKlotz/type-to-tone">
             <div>
               <i className="fa fa-github"
                   style={{
@@ -40,15 +40,15 @@ class Footer extends Component {
               ></i>
             </div>
           </a>
-          <a target="_blank" href="https://www.brandonklotz.co/">
+          {/* <a target="_blank" href="https://www.brandonklotz.co/">
             <div style={{
                   fontWeight: 'bold',
-                  fontSize: '1.5em',
+                  fontSize: '1em',
                   color: '#f70b38'
             }}>
               Handmade by Brandon Klotz
             </div>
-          </a>
+          </a> */}
         </div>
       </footer>
     );
