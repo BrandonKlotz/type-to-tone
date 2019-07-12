@@ -56,6 +56,7 @@ i {
 .documentTones {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
 }
 
@@ -88,48 +89,84 @@ i {
 .toggleButton {
   text-align: center;
   font-weight: bold;
-  border-radius: 40px;
+  border-radius: 60px;
+  background-color: #ebf0f1;
+  padding:  .6em;
+  min-width: 80px;
+  margin: 1em;
+}
+
+.docTones {
+  background-color: #f7f7f7;
+  margin: 2em;
+  padding: .6em;
+  border-radius: 60px;
+}
+
+.docTonesText {
+  font-weight: bold;
 }
 
 .highlighted span {
   color: #FFF;
   font-weight: bold;
-  padding: .4em;
+  padding: .25em;
 }
 
 .Analytical, .highlighted.analytical span {
-  color: #007F3B;
-  background: linear-gradient(#e2ffed, #cbffcb);
+  color: rgb(0, 180, 84);
 }
 
-.Confident, .highlighted.confident span {
-  color: #F78B0B;
-  background: linear-gradient(#FFF2E2, #FFE8CB);
+.highlighted.analytical span {
+  background: linear-gradient(#e2ffed, #cbffcb, #e2ffed);
 }
 
-.Joy, .highlighted.joy span {
+.Confident, .highlighted.confident span, .confident {
+  color: rgb(255, 166, 22);
+}
+
+.highlighted.confident span {
+  background: linear-gradient(#FFF2E2, #FFE8CB, #FFF2E2);
+}
+
+.Joy, .highlighted.joy span, .joy {
   color: #FFCB21;
-  background: linear-gradient(#FFF9E7, #FDF1CA);
 }
 
-.Fear, .highlighted.sadness span {
+.highlighted.joy span {
+  background: linear-gradient(#FFF9E7, #FDF1CA, #FFF9E7);
+}
+
+.Fear, .highlighted.sadness span, .fear {
   color: #7821FF;
-  background: linear-gradient(#F4E6FF, #EDCBFE);
 }
 
-.Anger, .highlighted.anger span {
+.highlighted.sadness span {
+  background: linear-gradient(#F4E6FF, #EDCBFE, #F4E6FF);
+}
+
+.Anger, .highlighted.anger span, .anger {
   color: #ff004c;
-  background: linear-gradient(#FFEDF1, #FFD6DE)
 }
 
-.Sadness, .highlighted.sadness span {
-  color: #38AEE2;
-  background: linear-gradient(#DFF3FB, #BBE3F4);
+.highlighted.anger span {
+  background: linear-gradient(#FFEDF1, #FFD6DE, #FFEDF1);
 }
 
-.Tentative, .highlighted.tentative span {
+.Sadness, .highlighted.sadness span, .sadness {
+  color: #06aff8;
+}
+
+.highlighted.sadness span {
+  background: linear-gradient(#d6eff8, #c7e6f3, #d6eff8);
+}
+
+.Tentative, .highlighted.tentative span, .tentative {
   background-color: #969696;
-  background: linear-gradient(#f8f8f8, #ebebeb);
+}
+
+.highlighted.tentative span {
+  background: linear-gradient(#f8f8f8, #ebebeb, #f8f8f8);
 }
 
 div.toggleButton:hover {
@@ -140,7 +177,7 @@ div.toggleButton:hover {
   width: 100%;
   background-color: #f7f7f7;
   border-top: 1px solid rgb(226, 230, 231);
-  border-bottom: 1px solid rgb(226, 230, 231);
+  border-bottom: 1px solid #e2e6e7;
   line-height: 1.5em;
   display: flex;
   flex-wrap: wrap;
@@ -179,21 +216,20 @@ hr {
   }
 }
 
-/* Score pop-up styling */
-
 .scoreInfo {
   display: none;
   position: absolute;
+  top: 0;
   height: auto;
-  width: auto;
+  min-width: 120px;
+  text-align: center;
   z-index: 10;
-  box-shadow: 0px 4px 20px rgb(159, 160, 160);
-  font-weight: bold;
-  padding: 1em;
-  color: rgb(58, 58, 58);
+  margin-left: 92%;
+  box-shadow: 0px 4px 20px rgba(159, 160, 160, 0.2);
+  background-color: white;
+  padding: .6em;
   border: 1px solid rgb(198, 198, 202);
   border-radius: 40px;
-  background-color: #FFF;
 }
 
 /* Sentence Text on Click */

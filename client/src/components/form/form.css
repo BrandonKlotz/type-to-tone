@@ -52,7 +52,7 @@ textarea:focus {
 
 /* .button-bg:hover .button {
   color: black;
-  border: 2px solid black;
+  border: 2px solid rgb(53, 184, 86);
 } */
 
 @media only screen and (max-width: 425px) {
