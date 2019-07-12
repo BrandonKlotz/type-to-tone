@@ -37,7 +37,6 @@ class Form extends Component {
                     display: "flex",
                     width: "90%",
                     justifyContent: "space-between",
-                    display: 'flex',
                     paddingRight: '4em',
                     paddingLeft: '4em'
                   }}
@@ -65,19 +64,19 @@ class Form extends Component {
                       <div className="button-bg"
                            id='copy-button'
                            style={{
-                            background: 'linear-gradient(#E7EFFC, #CADBF7)'
+                            background: 'linear-gradient(#dedede, #cecece)'
                            }}
                       >
                         <div className="button"
                              style={{
-                              color: '#4064AF',
-                              border: '2px solid #4064AF'
+                              color: '#acacac',
+                              border: '2px solid #acacac'
                             }}
                         >
                           <i className="fa fa-check"
                             style={{
-                              fontSize: '1.25em',
-                              color: '#4064AF'
+                              fontSize: '1.2em',
+                              color: '#acacac'
                             }}>
                         </i>
                         </div>
@@ -99,7 +98,7 @@ class Form extends Component {
                           >
                               <i className="fa fa-clone"
                                  style={{
-                                   fontSize: '1.25em',
+                                   fontSize: '1.2em',
                                    color: '#4064AF'
                                  }}>
                               </i>
@@ -111,12 +110,6 @@ class Form extends Component {
               </div>
             </div>
         );
-    }
-
-    handleHover() {
-      this.setState(state => ({
-        hover: !state.hover
-      }));
     }
 
     handleDisabledButton = event => {
