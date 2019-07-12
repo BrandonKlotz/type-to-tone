@@ -22,12 +22,12 @@ class SentenceResults extends Component {
 
                 const scores = sentence.tones.map(tone => {
                     return (
-                        <span key={tone.tone_id}
-                              className={`${tone.tone_id + tone.tone_name}`}
+                        <div key={tone.tone_id}
+                             className={`${tone.tone_id + tone.tone_name}`}
                         >
-                            {`${tone.score.toFixed(2) + ": " + tone.tone_name}`}
+                            {`${tone.score.toFixed(2) + " " + tone.tone_name}`}
                             <br />
-                        </span>
+                        </div>
                     );
                 });
                 //  Where we actually return the JSX to display sentences
@@ -35,7 +35,9 @@ class SentenceResults extends Component {
                     <div key={sentence.sentence_id} className={classnames}>
                         <div className="sentenceText">
                             <span>{sentence.text}&nbsp;</span>
-                            <div className="scoreInfo">{scores}</div>
+                            <div className={`scoreInfo ${scores}`}>
+                              {scores}
+                            </div>
                         </div>
                     </div>
                 );
